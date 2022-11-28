@@ -49,6 +49,8 @@ nav{
 
 nav ul{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
 }
 
@@ -201,7 +203,7 @@ footer{
 	margin: 3em auto;
 	background: rgba(255, 255, 255, 0.95);
 	height: 300px;
-	width: 480px;
+	width: 50%;
 	padding: 1em 3em 5em 3em;	
 }
 
@@ -224,6 +226,7 @@ input, textarea {
 .contact{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
 }
  .contact a{
@@ -272,11 +275,14 @@ input, textarea {
 .langage-ul{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 .card-skill{
     display: flex;
+    flex-wrap: wrap;
 }
+
 
 .container-skill{
 	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
@@ -348,7 +354,7 @@ progress{
     background-color: #fff;
     width: 80%;
     margin: 0 auto;
-    height: 400px;
+    height: auto;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     margin-top: 100px;
   }
@@ -536,9 +542,57 @@ progress{
       bottom: 42px;
     }
   }
+/* responsive */
+@media screen and (max-width: 952px){
+  nav{
+    justify-content: center;
+  }
+  footer{
+    flex-direction: column-reverse;
+  }
 
+  .logo{
+    margin: 15px auto;
+  }
+  #container h2{
+    font-size: 2rem;
+  }
+  #container button{
+    padding: 10px;
+  }
+  h1{
+    font-size: 20px;
+  }
 
+  h2, h3{
+    font-size: 15px;
+  }
+}
 
+@media screen and (max-width: 766px){
+    nav a{
+      font-size: 10px;
+    }
 
+    .container-pres{
+      display: flex;
+      flex-wrap: wrap;
+    }
 
+    .pres{
+      width: 85%;
+    }
 
+    .img-pres{
+      width:100%;
+    }
+   
+    .home-page h1{
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    .home-page  p, .home-page cite{
+      font-size: 13px;
+    }
+    
+}
